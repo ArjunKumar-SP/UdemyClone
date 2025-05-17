@@ -64,6 +64,10 @@ body{
     align-items: center;
 }
 
+.navbar__s4{
+    display: none;
+}
+
 /*My learning popup*/
 .mylearning{
     position: relative;
@@ -151,8 +155,9 @@ font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans
 
 
 .Courses-card{
-    width: 350px;
-
+    flex-grow: 1;
+    flex-basis: 20%;
+    margin: 5px;
 }
 
 .Courses-card img{
@@ -210,3 +215,24 @@ font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans
     margin: 20px;
 }
 
+/*Media quiers*/
+@media screen  and (max-width:800px){
+    body{
+        font-size: 10px ;
+    }
+}
+
+@media screen  and (max-width:600px){
+    .Courses-card{
+        flex: 40%;
+    }
+    .categories{
+        display: none;
+    }
+    .navbar__s2,.navbar__s3{
+        display: none;
+    }
+    .navbar__s4{
+    display: block;    
+    }
+}
